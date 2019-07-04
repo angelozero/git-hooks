@@ -7,7 +7,51 @@
 
 ---
 
-- *In order to increase our productivity (or keep our lazy nature happy) we simply rename ```prepare-commit-msg.sample``` to ```prepare-commit-msg```, paste the script listed below and ensure that the file is executable.*
+- *Just rename ```prepare-commit-msg.sample``` to ```prepare-commit-msg```, and dont forgeit to chmod +x in the file.*
 
+---
 
+#### Executando o comando mvn clean install / test antes do commit
+- pre-commit
+```javascript
+#!/bin/bash
+
+echo "Executando testes ..."
+# git-commit ---> nome do projeto
+mvn -f git-commit clean install &> ~/tests_log.txt
+if [[ $? != 0 ]] ; then
+	echo "Testes falhando, verifique no arquivo ~/tests_log.txt"
+	exit 1
+fi
+echo "Tudo OK"
+# ok
+exit 0
+
+```
+
+#### Adicionando o nome da branch antes do comentário
+- prepare-commit-msg
+```javascript
+#!/bin/bash
+
+# This way you can customize which branches should be skipped when
+# prepending commit message. 
+if [ -z "$BRANCHES_TO_SKIP" ]; then
+  BRANCHES_TO_SKIP=(master develop test)
+fi
+
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+BRANCH_NAME="${BRANCH_NAME##*/}"
+
+BRANCH_EXCLUDED=$(printf "%s\n" "${BRANCHES_TO_SKIP[@]}" | grep -c "^$BRANCH_NAME$")
+BRANCH_IN_COMMIT=$(grep -c "\[$BRANCH_NAME\]" $1)
+
+if [ -n "$BRANCH_NAME" ] && ! [[ $BRANCH_EXCLUDED -eq 1 ]] && ! [[ $BRANCH_IN_COMMIT -ge 1 ]]; then 
+  sed -i.bak -e "1s/^/[$BRANCH_NAME] /" $1
+fi
+```
+#### Validando se a branch a ser criada segue o nome padrão pré determinado
+- ???
+```javascript
+```
 
