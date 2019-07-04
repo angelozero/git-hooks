@@ -30,3 +30,21 @@ if [ -n "$BRANCH_NAME" ] && ! [[ $BRANCH_EXCLUDED -eq 1 ]] && ! [[ $BRANCH_IN_CO
   sed -i.bak -e "1s/^/[$BRANCH_NAME] /" $1
 fi
 ```
+
+---
+
+Regex para nome de branch
+ - Deve começar com "[ANGELO-"
+ - Deve terminar com "]"
+ 
+ ```javascript
+ #! /bin/bash
+
+text1="[ITAU-]"
+if [[ $text1 =~ ^\[ITAU-.*\]$ ]]; then
+        echo "text1 match"
+else
+        echo "text1 not match"
+
+fi
+ ```
