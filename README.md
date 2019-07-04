@@ -5,6 +5,8 @@
 
 [Validating if all tests are passing with GitHook](https://www.youtube.com/watch?v=MF72e-12dxE)
 
+[Run mvn before commit](https://codepad.co/snippet/running-junit-test-before-push-on-git-with-maven)
+
 ---
 
 - *Just rename ```prepare-commit-msg.sample``` to ```prepare-commit-msg```, and dont forgeit to chmod +x in the file.*
