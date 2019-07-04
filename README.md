@@ -34,7 +34,7 @@ fi
 ---
 
 Regex para nome de branch
- - Deve começar com "[ANGELO-" e deve terminar com "]"
+ - should start with "[ANGELO-" and end with "]"
  
  ```javascript
  #! /bin/bash
