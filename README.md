@@ -3,6 +3,11 @@
 
 [Prepend Git Commit Messages](http://blog.bartoszmajsak.com/blog/2012/11/07/lazy-developers-toolbox-number-1-prepend-git-commit-messages/)
 
+<<<<<<< HEAD
+=======
+[Validating if all tests are passing with GitHook](https://www.youtube.com/watch?v=MF72e-12dxE)
+
+>>>>>>> 04a592986dc3d3acdc01e6bd8e56e10e430f8ba1
 ---
 
 ##### *In order to increase our productivity (or keep our lazy nature happy) we simply rename ```prepare-commit-msg.sample``` to ```prepare-commit-msg```, paste the script listed below and ensure that the file is executable.*
@@ -28,3 +33,23 @@ if [ -n "$BRANCH_NAME" ] && ! [[ $BRANCH_EXCLUDED -eq 1 ]] && ! [[ $BRANCH_IN_CO
   sed -i.bak -e "1s/^/[$BRANCH_NAME] /" $1
 fi
 ```
+<<<<<<< HEAD
+=======
+
+---
+
+Regex para nome de branch
+ - should start with "[ANGELO-" and end with "]"
+ 
+ ```javascript
+ #! /bin/bash
+
+text1="[ANGELO-]"
+if [[ $text1 =~ ^\[ANGELO-.*\]$ ]]; then
+        echo "OK"
+else
+        echo "NOK"
+
+fi
+ ```
+>>>>>>> 04a592986dc3d3acdc01e6bd8e56e10e430f8ba1
