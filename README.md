@@ -34,17 +34,16 @@ fi
 ---
 
 Regex para nome de branch
- - Deve começar com "[ANGELO-"
- - Deve terminar com "]"
+ - Deve começar com "[ANGELO-" e deve terminar com "]"
  
  ```javascript
  #! /bin/bash
 
-text1="[ITAU-]"
-if [[ $text1 =~ ^\[ITAU-.*\]$ ]]; then
-        echo "text1 match"
+text1="[ANGELO-]"
+if [[ $text1 =~ ^\[ANGELO-.*\]$ ]]; then
+        echo "OK"
 else
-        echo "text1 not match"
+        echo "NOK"
 
 fi
  ```
