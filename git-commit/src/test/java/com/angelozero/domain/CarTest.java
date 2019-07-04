@@ -13,6 +13,8 @@ public class CarTest {
 		Assert.assertEquals(car.getModel(), model+"i");
 		
 		
+		
+		
 //		mvn test | grep -oP '(?<=Failures: )[0-9]+' | tail -1
 	}
 
