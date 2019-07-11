@@ -10,6 +10,7 @@ public class PersonTest {
 		String name = "Angelo";
 		Person person = new Person(name);
 
+		// *** Teste passando
 		Assert.assertEquals(person.getName(), name);
 	}
 
