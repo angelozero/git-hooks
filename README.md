@@ -2,9 +2,9 @@
 
 ---
 
-**Hook para validar o nome da branch pré-definida e roda os testes via mvn antes do push
+**Hook para validar o nome da branch pré-definida e roda os testes via mvn antes do push**
 
-**Hook para adicionar o nome da branch antes do comentário no comando ```git commit -m ""```
+**Hook para adicionar o nome da branch antes do comentário no comando ```git commit -m ""```**
 
 ---
 
@@ -20,7 +20,7 @@
 
 ---
 
-**Hook usado no comando ```git push``` para validar o nome da branch pré-defininda e executando o comando mvn clean install
+**Hook usado no comando ```git push``` para validar o nome da branch pré-defininda e executando o comando mvn clean install**
 - *pre-push*
 ```javascript
 #!/bin/bash
@@ -57,7 +57,7 @@ fi
 exit 0
 
 ```
-**Hook usado no comando ```git commit``` para validar adicionar o nome da branch antes da mensagem do commit
+**Hook usado no comando ```git commit``` para validar adicionar o nome da branch antes da mensagem do commit**
 - prepare-commit-msg
 ```javascript
 #!/bin/bash
