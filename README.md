@@ -14,9 +14,9 @@
 
 4 - Para ambos os arquivos faça as seguintes configuraçes:
 
- 4.1 - Remova a extensão ```.sample``` dos arquivos usados ( EX: Renomeie o arquivo ```prepare-commit-msg.sample``` para ```prepare-commit-msg``` )
+  4.1 - Remova a extensão ```.sample``` dos arquivos usados ( EX: Renomeie o arquivo ```prepare-commit-msg.sample``` para ```prepare-commit-msg``` )
  
- 4.2 - E via terminal use o comando ```chmod +x ``` para alterar suas permissões. ( EX.: ```chmod +x prepare-commit-msg``` )
+  4.2 - E via terminal use o comando ```chmod +x ``` para alterar suas permissões. ( EX.: ```chmod +x prepare-commit-msg``` )
 
 ---
 
