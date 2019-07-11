@@ -33,12 +33,13 @@ valid_branch_regex="^(ANGELO)\-[a-z0-9._-]+$"
 
 project_name="git-hooks"
 
-message="O nome da branch esta fora do padrão pré-definido. O nome deve seguir o seguinte padrão: $valid_branch_regex.
-\nRenomeie a branch usando o comando git branch -m nome_branch_atual_errado nome_branch_valido para corrigir.
+message="O nome da branch esta fora do padrão pré-definido. Renomeie a branch usando o comando git branch -m nome_branch_atual_errado nome_branch_valido para corrigir."
+
+skip_branchs=("master develop bufgix")
 
 
-if [[ ! $local_branch =~  $valid_branch_regex ]]; then
-        echo $message
+if [[  ! $local_branch =~  $valid_branch_regex ]] && [[ ! " ${skip_branchs[@]} " =~ " $local_branch " ]]  ; then
+	echo $message
 	exit 1
 
 else 
@@ -57,7 +58,6 @@ else
 fi
 
 exit 0
-
 ```
 ---
 
