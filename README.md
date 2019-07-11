@@ -31,6 +31,8 @@ local_branch="$(git rev-parse --abbrev-ref HEAD)"
 
 valid_branch_regex="^(ANGELO)\-[a-z0-9._-]+$"
 
+project_name="git-hooks"
+
 message="O nome da branch esta fora do padrão pré-definido. O nome deve seguir o seguinte padrão: $valid_branch_regex.
 \nRenomeie a branch usando o comando git branch -m nome_branch_atual_errado nome_branch_valido para corrigir.
 
@@ -41,8 +43,8 @@ if [[ ! $local_branch =~  $valid_branch_regex ]]; then
 
 else 
     	echo "Executando testes ..."
-	# git-commit ---> nome do projeto
-	mvn -f git-commit clean install &> ~/tests_log.txt
+	
+	mvn -f $project_name clean install &> ~/tests_log.txt
 	
 	if [[ $? == 0 ]] ; then
 		echo "TESTES OK"		
