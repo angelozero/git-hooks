@@ -60,7 +60,7 @@ exit 0
 ---
 
 **Hook usado no comando ```git commit``` para validar adicionar o nome da branch antes da mensagem do commit**
-- *prepare-commit-msg ( deve adicionar antes do commit o valor da branch e ignorando se caso a branch for master, develop stagin ou test. EX.: "[ANGELO-...] - mensagem do commit"*
+- *prepare-commit-msg ( deve adicionar antes do commit o valor da branch e ignorando se caso a branch for master, develop staging ou test. EX.: "[ANGELO-...] - mensagem_do_commit"*
 ```shell
 #!/bin/bash
 
