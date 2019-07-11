@@ -1,6 +1,6 @@
 # Git Hooks
 
-**Hook para validar o nome da branch pré-definida e roda os testes via mvn antes do push**
+**Hook para validar o nome da branch pré-definida e rodar os testes via ```mvn clean install``` antes do push**
 
 **Hook para adicionar o nome da branch antes do comentário no comando ```git commit -m ""```**
 
