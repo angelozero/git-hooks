@@ -22,7 +22,7 @@
 
 **Hook usado no comando ```git push``` para validar o nome da branch pré-defininda e executando o comando mvn clean install**
 - *pre-push (aqui o nome da branch padrão esta como "ANGELO-", aceitando após o traço qualquer valor)*
-```javascript
+```shell
 #!/bin/bash
 
 LC_ALL=C
@@ -32,7 +32,7 @@ local_branch="$(git rev-parse --abbrev-ref HEAD)"
 valid_branch_regex="^(ANGELO)\-[a-z0-9._-]+$"
 
 message="O nome da branch esta fora do padrão pré-definido. O nome deve seguir o seguinte padrão: $valid_branch_regex.
-\nRenomeie a branch usando o comando \"git branch -m nome_branch_atual_errado nome_branch_valido\" para corrigir.
+\nRenomeie a branch usando o comando git branch -m nome_branch_atual_errado nome_branch_valido para corrigir.
 
 
 if [[ ! $local_branch =~  $valid_branch_regex ]]; then
@@ -61,7 +61,7 @@ exit 0
 
 **Hook usado no comando ```git commit``` para validar adicionar o nome da branch antes da mensagem do commit**
 - prepare-commit-msg ( deve adicionar antes do commit o valor da branch e ignorando se caso a branch for master, develop stagin ou test. EX.: "[ANGELO-...] - mensagem do commit"
-```javascript
+```shell
 #!/bin/bash
 
 # Branchs que devem ser ignoradas
