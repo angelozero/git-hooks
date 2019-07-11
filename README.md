@@ -12,7 +12,7 @@
 
  - Aqui vamos usar 2 arquivos, o ```pre-push.sample``` e o ``` prepare-commit-msg```.
 
- - Para ambos os arquivos faça as seguintes configuraçes:
+ - Para ambos os arquivos faça as seguintes configurações:
 
 	- Remova a extensão ```.sample``` dos arquivos usados ( EX: Renomeie o arquivo ```prepare-commit-msg.sample``` para ```prepare-commit-msg``` )
  
