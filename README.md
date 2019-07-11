@@ -8,7 +8,7 @@
 
 1 - Acesse dentro do diretório do projeto a pasta oculta ```~/.git/hooks```
 
-2 - Nela você encontrará uma série de arquivos ```.sample```. Estes arquivos são usados para criarem os hooks.
+2 - Nela você encontrará uma série de arquivos ```.sample```, estes arquivos são usados para criarem os hooks.
 
 3 - Aqui vamos usar 2 arquivos, o ```pre-push.sample``` e o ``` prepare-commit-msg```.
 
