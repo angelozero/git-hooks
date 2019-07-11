@@ -10,13 +10,12 @@ public class CarTest {
 		String model = "Nissan Skyline R34 - GTR";
 		Car car = new Car(model);
 
-		Assert.assertEquals(car.getModel(), model);
+		//Teste falhando
+		Assert.assertEquals(car.getModel(), model + "i");
 		
+		// Teste passando
+		//Assert.assertEquals(car.getModel(), model);
 
-		// mvn test | grep -oP '(?<=Failures: )[0-9]+' | tail -1
 	}
 
 }
-
-///
-
