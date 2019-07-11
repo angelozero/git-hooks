@@ -36,7 +36,7 @@ message="O nome da branch esta fora do padrão pré-definido. O nome deve seguir
 
 
 if [[ ! $local_branch =~  $valid_branch_regex ]]; then
-        echo "Nome da Branch fora do padrão"
+        echo $message
 	exit 1
 
 else 
@@ -45,7 +45,7 @@ else
 	mvn -f git-commit clean install &> ~/tests_log.txt
 	
 	if [[ $? == 0 ]] ; then
-		echo "TUDO OK"		
+		echo "TESTES OK"		
 	else
 		echo "Testes falhando, verifique no arquivo ~/tests_log.txt"
 		exit 1
@@ -60,7 +60,7 @@ exit 0
 ---
 
 **Hook usado no comando ```git commit``` para validar adicionar o nome da branch antes da mensagem do commit**
-- prepare-commit-msg ( deve adicionar antes do commit o valor da branch e ignorando se caso a branch for master, develop stagin ou test. EX.: "[ANGELO-...] - mensagem do commit"
+- *prepare-commit-msg ( deve adicionar antes do commit o valor da branch e ignorando se caso a branch for master, develop stagin ou test. EX.: "[ANGELO-...] - mensagem do commit"*
 ```shell
 #!/bin/bash
 
