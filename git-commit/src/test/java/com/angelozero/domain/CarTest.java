@@ -11,10 +11,10 @@ public class CarTest {
 		Car car = new Car(model);
 
 		// *** Teste falhando
-		Assert.assertEquals(car.getModel(), model + "i");
+//		Assert.assertEquals(car.getModel(), model + "i");
 		
 		// *** Teste passando
-		//Assert.assertEquals(car.getModel(), model);
+		Assert.assertEquals(car.getModel(), model);
 
 	}
 
