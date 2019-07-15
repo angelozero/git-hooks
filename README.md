@@ -82,7 +82,8 @@ if [ -n "$BRANCH_NAME" ] && ! [[ $BRANCH_EXCLUDED -eq 1 ]] && ! [[ $BRANCH_IN_CO
   sed -i.bak -e "1s/^/[$BRANCH_NAME] /" $1
 fi
 ```
-ou
+*ou para nenhuma validação e colocar o nome completo da branch*
+
 ```shell
 #!/bin/bash
 
