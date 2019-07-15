@@ -82,6 +82,14 @@ if [ -n "$BRANCH_NAME" ] && ! [[ $BRANCH_EXCLUDED -eq 1 ]] && ! [[ $BRANCH_IN_CO
   sed -i.bak -e "1s/^/[$BRANCH_NAME] /" $1
 fi
 ```
+ou
+```shell
+#!/bin/bash
+
+BRANCH=`git branch | grep '^\*' | cut -b3-`
+FILE=`cat "$1"`
+echo "[$BRANCH $FILE]" > "$1"
+```
 
 ---
 
