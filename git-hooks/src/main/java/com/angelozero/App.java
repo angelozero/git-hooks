@@ -6,6 +6,6 @@ package com.angelozero;
  */
 public class App {
 	public static void main(String[] args) {
-		System.out.println("Hello World!!!!sssss!??");
+		System.out.println("Hello World!!!!s!??");
 	}
 }
