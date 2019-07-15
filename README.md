@@ -29,7 +29,7 @@ LC_ALL=C
 
 local_branch="$(git rev-parse --abbrev-ref HEAD)"
 
-valid_branch_regex="^(ANGELO)\-[a-z0-9._-]+$"
+valid_branch_regex="^(feature|bugfix)\/(ANGELO)-[0-9-]+$"
 
 project_folder_name="git-hooks"
 
